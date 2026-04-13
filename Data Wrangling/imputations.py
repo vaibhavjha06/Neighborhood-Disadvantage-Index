@@ -45,6 +45,7 @@ Definition
 Impute median of non-null tracts from the same county
 If all tract data is missing in county, impute state-level median
 """
+feature_cols = [c for c in census.columns if c not in id_cols + ['tract_count']]
 
 
 def impute_census(df, feature_cols):
@@ -53,8 +54,9 @@ def impute_census(df, feature_cols):
     for col in feature_cols:
         county_median = df.groupby(['STATE', 'COUNTY'])[col].transform('median')
         state_median = df.groupby('STATE')[col].transform('median')
+        nation_median = df[col].median()
 
-        df[col] = df[col].fillna(county_median).fillna(state_median)
+        df[col] = df[col].fillna(county_median).fillna(state_median).fillna(nation_median)
 
     return df
 
@@ -62,9 +64,8 @@ def impute_census(df, feature_cols):
 """
 Implementation
 """
-feature_cols = [c for c in census.columns if c not in id_cols + ['tract_count']]
 imputed_census = impute_census(census, feature_cols)
-imputed_census.to_csv('/Users/vaibhavjha/Documents/Yale Project/Data/imputed_census.csv')
+#imputed_census.to_csv('/Users/vaibhavjha/Documents/Yale Project/Data/imputed_census.csv')
 
 """
 Verify
