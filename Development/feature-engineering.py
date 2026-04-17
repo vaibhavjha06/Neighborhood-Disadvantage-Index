@@ -89,9 +89,11 @@ df = impute_feature(df, 'Income_6')
 """
 Housing engineered features
 """
-df['Housing_1'] = 1 - df['B25058_001E']
+# Fixed
+df['Housing_1'] = df['B25058_001E']
+
 df['Housing_2'] = df['B25071_001E']
-df['Housing_3'] = 1 - df['B25077_001E']
+df['Housing_3'] = df['B25077_001E']
 df['Housing_4'] = df['B25002_003E'] / df['B25002_001E']
 df = impute_feature(df, 'Housing_4')
 df['Housing_5'] = df['B25014_013E'] / df['B25014_008E']

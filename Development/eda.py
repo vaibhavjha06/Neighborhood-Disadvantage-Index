@@ -185,7 +185,7 @@ plt.xlabel("Proportion of individuals working full-time, year-round at 16-19 yea
 plt.close()
 
 # Employment_7
-# Theoretical range: [-inf, inf]
+# Theoretical range: (-inf, inf)
 sns.histplot(engineered_features['Employment_7'], bins=20)
 #plt.xlim(-5, 5)
 plt.title("Mean usual hours worked in past 12 months for workers aged 16-64")
@@ -195,7 +195,7 @@ plt.xlabel("Mean usual hours worked in past 12 months for workers aged 16-64")
 plt.close()
 
 # Employment_8
-# Theoretical range: (0, 1)
+# Theoretical range: [0, 1]
 sns.histplot(engineered_features['Employment_8'], bins=20)
 #plt.xlim(-5, 5)
 plt.title("Proportion: civilian labor force that is unemployed / total civilian labor force")
@@ -205,11 +205,169 @@ plt.xlabel("Unemployment rate")
 plt.close()
 
 # Employment_9
-# Theoretical range: (0, 1)
+# Theoretical range: [0, 1]
 sns.histplot(engineered_features['Employment_9'], bins=20)
 #plt.xlim(-5, 5)
 plt.title("Proportion: blue-collar industry workers / all workers")
 plt.ylabel('Count')
 plt.xlabel("Proportion of blue-collar industry workers")
+#plt.show()
+plt.close()
+
+
+"""
+Visualization: Income & Poverty engineered features
+"""
+# Income_1
+# Theoretical range: [0, 1]
+sns.histplot(engineered_features['Income_1'], bins=20)
+#plt.xlim(-5, 5)
+plt.title("Proportion: households earning below the national median income ($68,703) \n in the past 12 months / all households")
+plt.ylabel('Count')
+plt.xlabel("Proportion of households earning below the national median income ($68,703) in the past 12 months")
+#plt.show()
+plt.close()
+
+# Income_2
+# Theoretical range: [0, 1]
+sns.histplot(engineered_features['Income_2'], bins=20)
+#plt.xlim(-5, 5)
+plt.title("Proportion: households that received public assistance income in past 12 months / \n total number of households")
+plt.ylabel('Count')
+plt.xlabel("Proportion of households that received public assistance income in past 12 months")
+#plt.show()
+plt.close()
+
+# Income_3
+# Theoretical range: (0, 1)
+sns.histplot(engineered_features['Income_3'], bins=20)
+#plt.xlim(-5, 5)
+plt.title("Gini index of income inequality")
+plt.ylabel('Count')
+plt.xlabel("Gini index of income inequality")
+#plt.show()
+plt.close()
+
+# Income_4
+# Theoretical range: [0, 1]
+sns.histplot(engineered_features['Income_4'], bins=20)
+#plt.xlim(-5, 5)
+plt.title("Proportion: households with cash public assistance or food stamps/SNAP \n in last 12 months / total households")
+plt.ylabel('Count')
+plt.xlabel("Proportion of households with cash public assistance or food stamps/SNAP in last 12 months")
+#plt.show()
+plt.close()
+
+# Income_5
+# Theoretical range: (-inf, inf)
+sns.histplot(engineered_features['Income_5'], bins=20)
+#plt.xlim(-5, 5)
+plt.title("Difference in median incomes between households that receive food stamps/SNAP \n in the past 12 months vs. those that do not")
+plt.ylabel('Count')
+plt.xlabel("Difference in median incomes")
+#plt.show()
+plt.close()
+
+# Income_6
+# Theoretical range: (-inf, inf)
+sns.histplot(engineered_features['Income_6'], bins=20)
+plt.xlim(0, 20)
+plt.title("Mobility rate comparison within a county between poverty and nonpoverty individuals")
+plt.ylabel('Count')
+plt.xlabel("Mobility rate")
+#plt.show()
+plt.close()
+
+
+"""
+Visualization: Housing engineered features
+"""
+# Housing_1
+# Theoretical range: (-inf, inf)
+sns.histplot(engineered_features['Housing_1'], bins=20)
+#plt.xlim(-5, 5)
+plt.title("Median contract rent, reversed")
+plt.ylabel('Count')
+plt.xlabel("1 - median contract rent")
+#plt.show()
+plt.close()
+
+# Housing_2
+# Theoretical range: [0,1]
+sns.histplot(engineered_features['Housing_2'], bins=20)
+#plt.xlim(-5, 5)
+plt.title("Median gross rent as a percentage of household income")
+plt.ylabel('Count')
+plt.xlabel("Median gross rent as a percentage of household income")
+#plt.show()
+plt.close()
+
+# Housing_3
+# Theoretical range: [0,1]
+sns.histplot(engineered_features['Housing_3'], bins=20)
+#plt.xlim(-5, 5)
+plt.title("Median value, reversed")
+plt.ylabel('Count')
+plt.xlabel("1 - median value")
+#plt.show()
+plt.close()
+
+# Housing_4
+# Theoretical range: [0,1]
+sns.histplot(engineered_features['Housing_4'], bins=20)
+#plt.xlim(-5, 5)
+plt.title("Proportion: vacant housing")
+plt.ylabel('Count')
+plt.xlabel("Proportion of vacant housing")
+#plt.show()
+plt.close()
+
+# Housing_5
+# Theoretical range: [0,1]
+sns.histplot(engineered_features['Housing_5'], bins=20)
+plt.xlim(0, 0.5)
+plt.title("Proportion: renter occupied properties where 2.01 or more occupants per room / \n total renter occupied properties")
+plt.ylabel('Count')
+plt.xlabel("Proportion of renter occupied properties where 2.01 or more occupants per room")
+#plt.show()
+plt.close()
+
+# Housing_6
+# Theoretical range: [0,1]
+sns.histplot(engineered_features['Housing_6'], bins=20)
+#plt.xlim(0, 0.5)
+plt.title("Proportion: non-owner occupied properties / total properties")
+plt.ylabel('Count')
+plt.xlabel("Proportion of non-owner occupied properties")
+#plt.show()
+plt.close()
+
+# Housing_7
+# Theoretical range: [0,1]
+sns.histplot(engineered_features['Housing_7'], bins=20)
+#plt.xlim(0, 0.5)
+plt.title("Proportion: households that have married-couple families / total households, reversed")
+plt.ylabel('Count')
+plt.xlabel("1 - proportion of households that have married-couple families")
+#plt.show()
+plt.close()
+
+# Housing_8
+# Theoretical range: (-inf, inf)
+sns.histplot(engineered_features['Housing_8'], bins=20)
+#plt.xlim(-2100, -1800)
+plt.title("Median year structure built, reversed")
+plt.ylabel('Count')
+plt.xlabel("1 - median year structure built")
+#plt.show()
+plt.close()
+
+# Housing_9
+# Theoretical range: (-inf, inf)
+sns.histplot(engineered_features['Housing_9'], bins=20)
+#plt.xlim(-2100, -1800)
+plt.title("Proportion: properties lacking complete kitchen facilities / total properties")
+plt.ylabel('Count')
+plt.xlabel("Proportion of properties lacking complete kitchen facilities")
 #plt.show()
 plt.close()
