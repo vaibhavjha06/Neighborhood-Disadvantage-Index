@@ -1,0 +1,52 @@
+STATE,STATE_NAME,mean_missingness,tract_count
+15,Hawaii,0.17,351
+38,North Dakota,0.11,205
+56,Wyoming,0.08,132
+34,New Jersey,0.08,2010
+36,New York,0.08,4918
+6,California,0.08,8057
+26,Michigan,0.08,2813
+51,Virginia,0.08,1907
+11,District of Columbia,0.08,179
+22,Louisiana,0.08,1148
+32,Nevada,0.07,687
+25,Massachusetts,0.07,1478
+24,Maryland,0.07,1406
+20,Kansas,0.07,770
+45,South Carolina,0.07,1103
+48,Texas,0.07,5265
+12,Florida,0.07,4245
+49,Utah,0.07,588
+8,Colorado,0.07,1249
+4,Arizona,0.07,1526
+44,Rhode Island,0.06,244
+46,South Dakota,0.06,222
+39,Ohio,0.06,2952
+47,Tennessee,0.06,1497
+37,North Carolina,0.06,2195
+54,West Virginia,0.06,484
+35,New Mexico,0.06,499
+33,New Hampshire,0.06,295
+1,Alabama,0.06,1181
+18,Indiana,0.06,1511
+28,Mississippi,0.06,664
+9,Connecticut,0.06,833
+21,Kentucky,0.06,1115
+10,Delaware,0.06,218
+13,Georgia,0.06,1969
+16,Idaho,0.06,298
+30,Montana,0.05,271
+5,Arkansas,0.05,686
+53,Washington,0.05,1458
+17,Illinois,0.05,3123
+31,Nebraska,0.05,532
+42,Pennsylvania,0.05,3218
+40,Oklahoma,0.05,1046
+23,Maine,0.05,358
+2,Alaska,0.05,167
+29,Missouri,0.05,1393
+19,Iowa,0.04,825
+41,Oregon,0.04,834
+27,Minnesota,0.04,1338
+55,Wisconsin,0.04,1409
+50,Vermont,0.02,184
