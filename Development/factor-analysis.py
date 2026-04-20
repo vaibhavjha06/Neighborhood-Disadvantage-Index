@@ -18,6 +18,7 @@ engineered_features = pd.read_csv('/Users/vaibhavjha/Documents/Yale Project/Data
 features = engineered_features.iloc[:, 6:]
 
 # Iteration after removing features
+
 final_features = features.drop(columns=['Education_2', 'Education_3', 'Education_5', 'Education_7',
                                         'Employment_1', 'Employment_3', 'Employment_5', 'Employment_6', 'Employment_7',
                                         'Income_1', 'Income_5', 'Income_6',

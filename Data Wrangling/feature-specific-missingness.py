@@ -103,6 +103,7 @@ state_income_poverty_missingness = compute_state_missingness(
 state_housing_missingness = compute_state_missingness(
     census, ['STATE'], housing_features, state_fips)
 
+
 """
 County-level analysis
 """
@@ -139,12 +140,12 @@ feature_cols = [c for c in county_missingness_all.columns
 # Run function
 result = find_consistently_missing(county_missingness_all, feature_cols)
 
-# Counties in top 10% for every single feature
+# Counties in top 5% for every single feature
 always_missing = result[result['consistently_missing']]
 print(f"{len(always_missing)} counties consistently in top 5% missing across all features")
 print(always_missing[['STATE_NAME', 'COUNTY', 'top5_count', 'top5_pct', 'tract_count']])
 
-# Counties in top 10% for most (e.g. 75%+) features
+# Counties in top 5% for most (e.g. 75%+) features
 mostly_missing = result[result['top5_pct'] >= 0.75]
 print(f"\n{len(mostly_missing)} counties in top 5% for 75%+ of features")
 print(mostly_missing[['STATE_NAME', 'COUNTY', 'top5_count', 'top5_pct', 'tract_count']])
@@ -152,3 +153,4 @@ print(mostly_missing[['STATE_NAME', 'COUNTY', 'top5_count', 'top5_pct', 'tract_c
 # Export tables
 #always_missing.to_csv('/Users/vaibhavjha/Documents/Yale Project/Data/Missingness/county_top_5_missing_always_data.csv', index=False)
 #mostly_missing.to_csv('/Users/vaibhavjha/Documents/Yale Project/Data/Missingness/county_top_5_missing_mostly_data.csv', index=False)
+

@@ -2,6 +2,7 @@
 Import packages
 """
 import pandas as pd
+import matplotlib.pyplot as plt
 
 
 """
@@ -102,3 +103,16 @@ Save index
 final_output = final_features[['STATE', 'COUNTY', 'TRACT', 'NAME', 'tract_count', 'index']]
 #final_output.to_csv('/Users/vaibhavjha/Documents/Yale Project/Data/index.csv')
 print(final_output)
+
+
+"""
+Report descriptive statistics for index and its distribution
+"""
+print(final_output['index'].describe())
+
+# Histogram
+plt.hist(final_output['index'], bins=35)
+plt.xlabel("Value")
+plt.ylabel("Frequency")
+plt.title("Histogram of the Neighborhood Disadvantage Index")
+plt.show()

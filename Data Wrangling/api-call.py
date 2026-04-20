@@ -25,12 +25,7 @@ for state_fips in ALL_STATES_AND_DC:
     df = ced.download(
         dataset=ACS5,
         vintage=2019,
-        download_variables=['NAME', 'B06009_007E', 'B06009_009E', 'B06009_013E', 'B06009_015E', 'B06009_030E',
-                            'B06009_025E', 'B13014_002E', 'B13014_010E', 'B13014_011E', 'B15011_022E',
-                            'B15011_023E', 'B15011_028E', 'B15011_029E','B16010_016E', 'B16010_021E',
-                            'B17003_003E', 'B17003_004E', 'B17003_005E', 'B17003_008E', 'B17003_009E',
-                            'B17003_010E', 'B20004_001E', 'B20004_003E', 'B20004_006E', 'B27019_008E',
-                            'B27019_011E', 'B27019_012E', 'B28006_008E', 'B28006_013E'],
+        download_variables=['NAME', 'B01001_026E', 'B01001_001E', 'B02001_002E', 'B01003_001E'],
         state=state_fips,
         county="*",
         tract="*",
@@ -38,9 +33,9 @@ for state_fips in ALL_STATES_AND_DC:
     )
     all_states.append(df)
 
-education = pd.concat(all_states, ignore_index=True)
-print(education)
-education.to_csv('/Users/vaibhavjha/Documents/Yale Project/Data/education_data.csv', index=False)
+othervars = pd.concat(all_states, ignore_index=True)
+print(othervars)
+othervars.to_csv('/Users/vaibhavjha/Documents/Yale Project/Data/othervars.csv', index=False)
 
 
 """
