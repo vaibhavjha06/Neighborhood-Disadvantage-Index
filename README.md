@@ -21,29 +21,7 @@ The pipeline includes:
 
 ---
 
-## 3. Project Structure
-
-root/
-│
-├── README.md
-├── data/
-│   ├── raw/
-│   ├── processed/
-│
-├── preprocessing.py
-├── missingness_analysis.py
-├── efa.py
-├── index_construction.py
-├── regression.py
-├── robustness_checks.py
-│
-├── plots/
-├── results/
-└── environment.yml
-
----
-
-## 4. Methodology
+## 3. Methodology
 
 ### Data Preprocessing
 - Handles missing values
@@ -70,7 +48,7 @@ Outcomes:
 
 ---
 
-## 5. Robustness Checks
+## 4. Robustness Checks
 
 Model performance comparison:
 
@@ -86,7 +64,7 @@ Obesity:
 
 ---
 
-## 6. Environment Setup
+## 5. Environment Setup
 
 Requirements:
 - Python 3.x
@@ -98,7 +76,7 @@ conda activate your_env_name
 
 ---
 
-## 7. Usage
+## 6. Usage
 
 Run preprocessing:
 python preprocessing.py
@@ -114,7 +92,7 @@ python robustness_checks.py
 
 ---
 
-## 8. Outputs
+## 7. Outputs
 - Plots (histograms, factor visualizations)
 - Regression results
 - Summary statistics
@@ -122,13 +100,13 @@ python robustness_checks.py
 
 ---
 
-## 9. Reproducibility
+## 8. Reproducibility
 All analysis is reproducible using the scripts in this repository.  
 Data is sourced from publicly available U.S. Census Bureau datasets.
 
 ---
 
-## 10. Notes
+## 9. Notes
 - Missingness varies across states and features
 - Results depend on factor structure and variable construction
 - Index interpretation should be done in context of factor loadings
